@@ -56,6 +56,7 @@ func _on_volume_changed(value):
 	GameManager.set_volume(value)
 
 func _on_start_pressed():
+	GameManager.reset_game()
 	get_tree().change_scene_to_file("res://scenes/level.tscn")
 
 func _on_choose_pressed():

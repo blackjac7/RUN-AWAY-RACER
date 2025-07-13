@@ -19,7 +19,7 @@ var magnet_duration:float = 5.0
 var timer_counter: float = 0.0
 var boost_amount: float = 5.0  # seberapa cepat tambahan speed saat booster
 var get_item:int = -1
-var is_mute:bool=true
+var is_mute:bool=false
 var volume: float = 1.0
 
 func _ready():
@@ -68,7 +68,7 @@ func _process(delta: float) -> void:
 			
 
 func save_data():
-	var file = FileAccess.open("user://highscore.save", FileAccess.WRITE)
+	var file = FileAccess.open("user://data.save", FileAccess.WRITE)
 	file.store_var(highscore)
 	file.store_var(selected_car_type)
 	file.store_var(is_mute)
@@ -80,8 +80,8 @@ func save_highscore(hs):
 	save_data()
 	
 func load_data():
-	if FileAccess.file_exists("user://highscore.save"):
-		var file = FileAccess.open("user://highscore.save", FileAccess.READ)
+	if FileAccess.file_exists("user://data.save"):
+		var file = FileAccess.open("user://data.save", FileAccess.READ)
 		highscore = file.get_var()
 		var car = file.get_var()
 		var mute = file.get_var()
@@ -98,6 +98,7 @@ func load_data():
 	if selected_car_type == "":selected_car_type="Sedan"
 	
 func reset_game():
+	distance=0
 	score = 0
 	coin = 0
 	SPEED = 5.0

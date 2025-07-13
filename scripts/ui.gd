@@ -99,8 +99,8 @@ func _on_retry_pressed():
 	var game_over = find_child("GameOver", true, false)
 	if game_over.visible:
 		GameManager.reset_game()
+		GameManager.load_data()
 		get_tree().paused = false
-		
 		get_tree().reload_current_scene()
 
 func _on_exit_pressed():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cn1ul7tforn50"]
+[gd_scene load_steps=38 format=3 uid="uid://cn1ul7tforn50"]
 
 [ext_resource type="Script" uid="uid://cb3kk5dkv4ui1" path="res://scripts/move_city.gd" id="1_d1jib"]
 [ext_resource type="PackedScene" uid="uid://dxmehn13elwdf" path="res://assets/buildings/road_junction.gltf" id="1_donq6"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dq7durlog4jdp" path="res://scenes/booster.tscn" id="6_g51yv"]
 [ext_resource type="PackedScene" uid="uid://dbytfbvuo0tfv" path="res://assets/buildings/building_A.gltf" id="6_j2meo"]
 [ext_resource type="PackedScene" uid="uid://d1671kh0mmfqr" path="res://assets/buildings/building_B.gltf" id="7_5xpre"]
+[ext_resource type="PackedScene" uid="uid://dojt5tcu3y2c0" path="res://scenes/big_barrier.tscn" id="7_h86im"]
 [ext_resource type="PackedScene" uid="uid://brf2bvuh70nr" path="res://assets/buildings/building_F.gltf" id="8_bt3ks"]
 [ext_resource type="PackedScene" uid="uid://beqedbrh61g26" path="res://assets/buildings/building_G.gltf" id="9_nafls"]
 [ext_resource type="PackedScene" uid="uid://ecx6kfkvo8jv" path="res://assets/buildings/road_corner.gltf" id="10_4a3uy"]
@@ -18,7 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://dfmero77y70oy" path="res://assets/buildings/building_C.gltf" id="12_tclj6"]
 [ext_resource type="PackedScene" uid="uid://56a66lv3namr" path="res://assets/buildings/road_tsplit.gltf" id="13_1q685"]
 [ext_resource type="PackedScene" uid="uid://d1xsthkcwbbaa" path="res://assets/buildings/building_E.gltf" id="15_4rngo"]
-[ext_resource type="PackedScene" uid="uid://lu67k0b6k4n5" path="res://assets/buildings/car_police.gltf" id="16_2h7wg"]
 [ext_resource type="PackedScene" uid="uid://bn1e3ig3au3m3" path="res://assets/buildings/trafficlight_A.gltf" id="17_jqg4u"]
 [ext_resource type="PackedScene" uid="uid://cwtdg2da3hdv1" path="res://assets/buildings/trafficlight_C.gltf" id="18_hyh0h"]
 [ext_resource type="PackedScene" uid="uid://igkmwjshum25" path="res://assets/hallowen/bench.gltf" id="20_nk7l4"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://bifhl4w5pifew" path="res://scenes/barier.tscn" id="31_5sdgg"]
 [ext_resource type="PackedScene" uid="uid://x3n583fx6ytw" path="res://scenes/character/women_1.tscn" id="31_rcqcf"]
 [ext_resource type="PackedScene" uid="uid://dy2cknt0uvyvc" path="res://scenes/magnet.tscn" id="32_5sdgg"]
+[ext_resource type="PackedScene" uid="uid://b08mm6xnoou4p" path="res://scenes/car/police.tscn" id="35_h86im"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_donq6"]
 size = Vector3(9, 3.82788, 1.041)
@@ -42,7 +43,7 @@ size = Vector3(9, 3.82788, 1.041)
 [node name="City2" type="Node3D"]
 script = ExtResource("1_d1jib")
 coin_scene = ExtResource("2_1q0ea")
-col_item = Array[PackedScene]([ExtResource("31_5sdgg"), ExtResource("4_12k7i"), ExtResource("32_5sdgg"), ExtResource("31_5sdgg"), ExtResource("32_5sdgg"), ExtResource("6_g51yv"), ExtResource("6_g51yv")])
+col_item = Array[PackedScene]([ExtResource("31_5sdgg"), ExtResource("4_12k7i"), ExtResource("32_5sdgg"), ExtResource("31_5sdgg"), ExtResource("32_5sdgg"), ExtResource("6_g51yv"), ExtResource("6_g51yv"), ExtResource("7_h86im"), ExtResource("7_h86im")])
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -192,9 +193,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 0, 
 [node name="building_A2" parent="Node3D" instance=ExtResource("6_j2meo")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -4)
 
-[node name="car_police2" parent="Node3D" instance=ExtResource("16_2h7wg")]
-transform = Transform3D(0.654129, 0, -0.3669, 0, 0.75, 0, 0.3669, 0, 0.654129, 1.30613, 0.145046, -1.482)
-
 [node name="trafficlight_A2" parent="Node3D" instance=ExtResource("17_jqg4u")]
 transform = Transform3D(0.995886, 0, -0.0906152, 0, 1, 0, 0.0906152, 0, 0.995886, 0.986647, 0.0970659, 0.998163)
 
@@ -275,6 +273,9 @@ transform = Transform3D(-0.0572852, 0, 0.998358, 0, 1, 0, -0.998358, 0, -0.05728
 
 [node name="Node3D2" parent="Node3D" instance=ExtResource("29_nk7l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.978908, 0.0697051, -4.02679)
+
+[node name="Police" parent="Node3D" instance=ExtResource("35_h86im")]
+transform = Transform3D(0.357547, 0, -0.689896, 0, 0.777044, 0, 0.689896, 0, 0.357547, 1.30458, 0.147847, -0.202579)
 
 [node name="pos1" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.3, 2.84574)

@@ -6,7 +6,7 @@ var rnd=RandomNumberGenerator.new()
 var offset=-10
 
 # Called when the node enters the scene tree for the first time.
-func _ready():	
+func _ready():
 	for n in amnt:
 		spawnCity(n*offset)
 	

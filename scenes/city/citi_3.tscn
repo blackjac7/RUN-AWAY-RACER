@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dtfmxerjhagtx"]
+[gd_scene load_steps=25 format=3 uid="uid://dtfmxerjhagtx"]
 
 [ext_resource type="Script" uid="uid://cb3kk5dkv4ui1" path="res://scripts/move_city.gd" id="1_686fa"]
 [ext_resource type="PackedScene" uid="uid://cw636jy0mnite" path="res://assets/buildings/base.gltf" id="2_686fa"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bifhl4w5pifew" path="res://scenes/barier.tscn" id="6_1ngg0"]
 [ext_resource type="PackedScene" uid="uid://bgx8vsva6cw6n" path="res://assets/trees/CommonTree_2.gltf" id="6_74y5q"]
 [ext_resource type="PackedScene" uid="uid://b18r6ikc1xmtw" path="res://assets/trees/CommonTree_3.gltf" id="7_bjs1t"]
+[ext_resource type="PackedScene" uid="uid://dojt5tcu3y2c0" path="res://scenes/big_barrier.tscn" id="7_fsy6o"]
 [ext_resource type="PackedScene" uid="uid://b5i54ufdqcpfp" path="res://assets/trees/CommonTree_4.gltf" id="8_k0w1c"]
 [ext_resource type="PackedScene" uid="uid://djyvxedwwxspf" path="res://assets/trees/CommonTree_5.gltf" id="9_6t4tx"]
 [ext_resource type="PackedScene" uid="uid://bow4mx633llmf" path="res://assets/trees/Fern_1.gltf" id="12_00ua0"]
@@ -29,7 +30,7 @@ size = Vector3(2.45166, 0.570679, 12.0287)
 [node name="Citi3" type="Node3D"]
 script = ExtResource("1_686fa")
 coin_scene = ExtResource("2_dgvtm")
-col_item = Array[PackedScene]([ExtResource("20_dgvtm"), ExtResource("4_dgvtm"), ExtResource("5_mg0yb"), ExtResource("6_1ngg0"), ExtResource("6_1ngg0"), ExtResource("4_dgvtm"), ExtResource("20_dgvtm")])
+col_item = Array[PackedScene]([ExtResource("20_dgvtm"), ExtResource("4_dgvtm"), ExtResource("5_mg0yb"), ExtResource("6_1ngg0"), ExtResource("6_1ngg0"), ExtResource("4_dgvtm"), ExtResource("20_dgvtm"), ExtResource("7_fsy6o"), ExtResource("7_fsy6o")])
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
